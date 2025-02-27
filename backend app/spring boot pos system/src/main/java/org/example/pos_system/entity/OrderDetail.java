@@ -5,22 +5,23 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity
-public class Customer {
+public class OrderDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String phone;
-    private String name;
-    private String email;
-    private String address;
+    private int qty;
+    private double total_price;
 
-    @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
-    private List<Orders> orders;
+    @ManyToOne
+    @JoinColumn(name = "item_code",referencedColumnName = "item_code")
+    private Item item;
+
+    @ManyToOne
+    @JoinColumn(name = "order_id",referencedColumnName = "id")
+    private Orders order;
 
 }
