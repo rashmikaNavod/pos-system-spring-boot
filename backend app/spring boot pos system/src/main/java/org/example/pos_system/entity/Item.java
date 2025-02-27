@@ -13,12 +13,12 @@ import java.util.List;
 @Entity
 public class Item {
     @Id
-    private String item_code;
+    private String itemCode;
     private String description;
-    private int qty_on_hand;
-    private double unit_price;
+    private int qtyOnHand;
+    private double unitPrice;
 
     @OneToMany(mappedBy = "item",cascade = CascadeType.ALL)
-    private List<OrderDetail> order_details;
+    private List<OrderDetail> OrderDetails;
 
 }

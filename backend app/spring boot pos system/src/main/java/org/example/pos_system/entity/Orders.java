@@ -15,7 +15,7 @@ public class Orders {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private Date date;
+    private String date;
 
     @ManyToOne
     @JoinColumn(name = "customer_id",referencedColumnName = "id")

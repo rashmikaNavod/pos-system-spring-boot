@@ -12,7 +12,7 @@ import java.util.List;
 @Data
 public class OrderDTO {
     private int id;
-    private Date date;
+    private String date;
     private int customerId;
-    private List<OrderDetailDTO> OrderDetailDTOS;
+    private List<OrderDetailDTO> OrderDetails;
 }

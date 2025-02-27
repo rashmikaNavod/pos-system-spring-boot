@@ -14,10 +14,10 @@ public class OrderDetail {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int qty;
-    private double total_price;
+    private double totalPrice;
 
     @ManyToOne
-    @JoinColumn(name = "item_code",referencedColumnName = "item_code")
+    @JoinColumn(name = "item_code",referencedColumnName = "itemCode")
     private Item item;
 
     @ManyToOne

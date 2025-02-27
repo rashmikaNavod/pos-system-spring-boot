@@ -103,7 +103,7 @@ $("#customer_add_btn").on('click', (e)=>{
                     text: res.msg,
                 });
             }
-        })
+        });
 
         // let customer = new CustomerModel(mobileNumber,name,email,address);
         // customer_array.push(customer);

@@ -183,7 +183,7 @@
               
                         <div class="col-sm-6">
                           <label for="itemCode" class="form-label">Item Code</label>
-                          <input type="text" class="form-control" id="itemCode" placeholder="Item Code" required>
+                          <input type="text" class="form-control" id="itemCode" placeholder="Item Code" required readonly>
                         </div>
               
                         <div class="col-sm-6">
@@ -248,10 +248,10 @@
 
                   <div class="row mb-3 gap-3 gap-sm-0">
           
-                    <div class="col-sm-4">
+                    <!-- <div class="col-sm-4">
                       <label for="orderId" class="form-label">OrderId</label>
                       <input type="text" class="form-control" id="orderId" placeholder="OrderId" readonly>
-                    </div>
+                    </div> -->
           
                     <div class="col-sm-4">
                       <label for="date" class="form-label">Date</label>
@@ -260,8 +260,7 @@
 
                     <div class="col-sm-4">
                       <label for="cnumber" class="form-label">Customer Number</label>
-                      <input type="text" list="searchCustomerSuggestions" class="form-control" id="cnumber" placeholder="Search Number">
-                      <datalist id="searchCustomerSuggestions"></datalist>
+                      <select id="cnumber" class="form-select"></select>
                     </div>
           
                   </div>

@@ -9,6 +9,37 @@ $(document).ready(function(){
             console.error(err);
         }
     });
-
+    $.ajax({
+        url:'http://localhost:8080/api/v1/item/getAll',
+        type:"GET",
+        success:(res)=>{
+            $("#item-count").text(res.data.length);
+        },
+        error:(err)=>{
+            console.error(err);
+        }
+    });
+    $.ajax({
+        url:'http://localhost:8080/api/v1/order/get_all_orders',
+        type:"GET",
+        success:(res)=>{
+            console.log(res);
+            $("#orders-count").text(res.data.length);
+        },
+        error:(err)=>{
+            console.error(err);
+        }
+    });
+    $.ajax({
+        url:'http://localhost:8080/api/v1/order_details/get_total_revenue',
+        type:"GET",
+        success:(res)=>{
+            console.log(res);
+            $("#total-revenue-count").text(res)
+        },
+        error:(err)=>{
+            console.error(err);
+        }
+    });
 });
 

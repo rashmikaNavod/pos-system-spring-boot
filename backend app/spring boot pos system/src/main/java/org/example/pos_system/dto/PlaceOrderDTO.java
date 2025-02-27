@@ -3,17 +3,17 @@ package org.example.pos_system.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.example.pos_system.entity.OrderDetail;
 
-import java.util.List;
+import java.util.Date;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class ItemDTO {
-    private String itemCode;
-    private String description;
+public class PlaceOrderDTO {
+    private String date;
+    private String phone;
+    private String icode;
     private int qtyOnHand;
     private double unitPrice;
-    private List<OrderDetailDTO> OrderDetails;
+    private int iqty;
 }
